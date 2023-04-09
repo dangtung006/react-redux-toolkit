@@ -1,8 +1,10 @@
+import "./App.css"
+import Header2 from "./layouts/headers/header2";
+
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-            </header>
+            <Header2></Header2>
         </div>
     );
 }

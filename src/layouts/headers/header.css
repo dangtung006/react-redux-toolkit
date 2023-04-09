@@ -1,0 +1,162 @@
+/* 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    position: relative;
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  nav ul li:hover > a {
+    background-color: #eee;
+  }
+  
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    border: 1px solid #ccc;
+  }
+  
+  nav ul ul li {
+    display: block;
+  }
+  
+  nav ul ul li a {
+    padding: 10px;
+  }
+  
+  nav ul li:hover > ul {
+    display: block;
+  } */
+.logo {
+    font-size:  32px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding : 20px;
+
+    background: teal;
+    color : #fff;
+}
+.nav-links a{
+    color : #fff;
+}
+.menu{
+    display : flex;
+    font-size:  18px;
+    gap : 1em;
+}
+
+.menu li {
+    padding : 5px 14px;
+}
+.menu li:hover{
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition:  0.5 ease;
+}
+
+.services{
+    position: relative;
+}
+
+.services .dropdown{
+    position: absolute;
+    top : 35px;
+    left : 0px;
+
+    background-color: rgb(1, 139, 139);
+    border-radius: 8px;
+    padding : 1em 0;
+    display: none;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+.services .dropdown li + li {
+    /* next li is effect */
+    margin-top: 10px;
+}
+
+.services .dropdown li {
+    text-align: center;
+    padding: 0.5em 1em;
+    width : 8em;
+}
+
+.services .dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+input[type=checkbox]{
+    display: none;
+} 
+    
+/*HAMBURGER MENU*/
+    
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color:teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+    }
+        
+    .menu li + li {
+        margin-top: 12px;
+    }
+
+    .services .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+        
+    .services .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+}
+    
