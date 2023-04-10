@@ -1,7 +1,6 @@
 import AboutContainer from "../pages/about/about.container";
 import LoginContainer from "../pages/login/login.container";
 import UserContainer from "../pages/users/user.container";
-LoginContainer
 
 export const ROUTECONFIGS = {
     HOME: '/',
