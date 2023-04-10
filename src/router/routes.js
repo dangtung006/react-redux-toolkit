@@ -1,4 +1,5 @@
 import AboutContainer from "../pages/about/about.container";
+import HomeContainer from "../pages/home/home.container";
 import LoginContainer from "../pages/login/login.container";
 import UserContainer from "../pages/users/user.container";
 
@@ -12,7 +13,7 @@ export const ROUTECONFIGS = {
 const routes = [
     {
         path: ROUTECONFIGS.HOME,
-        element: null,
+        element: <HomeContainer />,
     },
 
     {

@@ -1,14 +1,17 @@
 import "./App.css"
-import AddRole from "./layouts/forms/addRole";
-import Header2 from "./layouts/headers/header2";
+import { BrowserRouter } from 'react-router-dom'
+import Router from './router';
+import BaseLayout from './layouts/base';
+
 
 function App() {
     return (
         <div className="App">
-            <Header2></Header2>
-            <div className="container">
-                <AddRole></AddRole>
-            </div>
+            <BrowserRouter>
+                <BaseLayout>
+                    <Router />
+                </BaseLayout>
+            </BrowserRouter>
         </div>
     );
 }

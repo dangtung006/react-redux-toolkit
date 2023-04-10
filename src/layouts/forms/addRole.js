@@ -12,17 +12,17 @@ function AddRole(props) {
                 </div>
                 <fieldset class="form-group">
                     <div class="row">
-                        <legend class="col-w-20">Is Active</legend>
-                        <div class="col-w-80">
+                        <legend className="col-w-20">Is Active</legend>
+                        <div className="col-w-80">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked />
-                                <label class="form-check-label" for="gridRadios1">
+                                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked />
+                                <label className="form-check-label" for="gridRadios1">
                                     active
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
-                                <label class="form-check-label" for="gridRadios2">
+                                <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
+                                <label className="form-check-label" for="gridRadios2">
                                     inactive
                                 </label>
                             </div>

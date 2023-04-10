@@ -1,20 +1,20 @@
 import React from 'react';
 import "./header.css";
+import { Link } from 'react-router-dom';
 
 function Header2(props) {
     return (
-        <nav class="navbar">
-            <div class="logo">My app</div>
+        <nav className="navbar">
+            <div className="logo">My app</div>
 
-            <ul class="nav-links">
+            <ul className="nav-links">
                 <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <label for="checkbox_toggle" className="hamburger">&#9776;</label>
 
-                <div class="menu">
+                <div className="menu">
 
-                    <li><a href="/">Home</a></li>
-
-                    <li><a href="/">About</a></li>
+                    <li><Link to="/">Home</Link> </li>
+                    <li><Link to="/login">Login</Link></li>
 
                     <li class="services">
 
@@ -35,11 +35,8 @@ function Header2(props) {
                         </ul>
 
                     </li>
-
-                    <li><a href="/">Pricing</a></li>
-
-                    <li><a href="/">Contact</a></li>
-
+                    <li><Link to="/user">Users</Link> </li>
+                    <li><Link to="/about">About</Link></li>
                 </div>
 
             </ul>
