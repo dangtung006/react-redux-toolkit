@@ -1,5 +1,5 @@
 import React from 'react';
-import "./form.css";
+
 function AddRole(props) {
     return (
         <div className='form-wrapper'>

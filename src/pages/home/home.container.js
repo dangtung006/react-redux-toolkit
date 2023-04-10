@@ -1,14 +1,13 @@
 import React from 'react';
-import AddRole from '../../layouts/forms/addRole';
-import { useSelector } from 'react-redux';
-import { remainRole } from '../../stores/selectors';
+import "./home.css";
+import AddRole from './addRole';
+import AdminRoles from './roles';
 
 function HomeContainer(props) {
-    const roles = useSelector(remainRole);
-    console.log("roles : ", roles);
     return (
         <div className="container">
             <AddRole />
+            <AdminRoles />
         </div>
     );
 }
