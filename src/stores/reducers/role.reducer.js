@@ -5,11 +5,7 @@ const roleSlice = createSlice({
 
     initialState: {
         "status": "idle",
-        "roles": [
-            { id: 1, name: "admin", isActive: true },
-            { id: 2, name: "supper admin", isActive: true },
-            { id: 3, name: "member", isActive: true },
-        ]
+        "roles": []
     },
 
     reducers: {
@@ -31,12 +27,15 @@ const roleSlice = createSlice({
                 state.status = "loading";
             })
             .addCase(fetchRoles.fulfilled, (state, action) => {
+
                 state.status = "idle";
                 state.roles = action.payload;
             })
+            //add role
             .addCase(addRole.fulfilled, (state, action) => {
-                state.push(action.payload);
+                state.roles.push(action.payload);
             })
+            //update role
             .addCase(disableRole.fulfilled, (state, action) => {
                 let curentRole = state.roles.find(role => role.id === action.payload);
                 if (curentRole) {
@@ -55,6 +54,7 @@ export const fetchRoles = createAsyncThunk("admin/role/list", async () => {
 });
 
 export const addRole = createAsyncThunk("admin/role/add", async (newRole) => {
+    return newRole;
     const res = await (await fetch("http://localhost:3001/admin/role/add", {
         method: "POST",
         body: JSON.stringify(newRole)
@@ -69,12 +69,3 @@ export const disableRole = createAsyncThunk("admin/role/inactive", async (update
     })).json();
     return res.data;
 })
-// export function addRole(role) {
-//     return function addRoleThunk(dispatch, getState) {
-//         console.log("addRole");
-//         console.log("getState before : ", getState());
-//         role.name = "aaaa";
-//         dispatch(roleSlice.actions.addRole(role))
-//         console.log("getState after : ", getState());
-//     }
-// }
