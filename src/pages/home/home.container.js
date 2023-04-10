@@ -1,12 +1,11 @@
 import React from 'react';
 import AddRole from '../../layouts/forms/addRole';
-// import PropTypes from 'prop-types';
-
-// home.container.propTypes = {
-
-// };
+import { useSelector } from 'react-redux';
+import { remainRole } from '../../stores/selectors';
 
 function HomeContainer(props) {
+    const roles = useSelector(remainRole);
+    console.log("roles : ", roles);
     return (
         <div className="container">
             <AddRole />

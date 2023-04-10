@@ -3,15 +3,13 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 const roleSlice = createSlice({
     name: "roles",
 
-    // initialState: [
-    //     { id: 1, name: "admin", isActive: true },
-    //     { id: 2, name: "supper admin", isActive: true },
-    //     { id: 3, name: "member", isActive: true },
-    // ],
-
     initialState: {
         "status": "idle",
-        "roles": []
+        "roles": [
+            { id: 1, name: "admin", isActive: true },
+            { id: 2, name: "supper admin", isActive: true },
+            { id: 3, name: "member", isActive: true },
+        ]
     },
 
     reducers: {
