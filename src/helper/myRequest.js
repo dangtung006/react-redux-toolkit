@@ -1,8 +1,8 @@
 import axios from "axios";
 
-
+// https://jsonplaceholder.typicode.com/posts
 const myRequest = axios.create({
-    baseURL: process.env.REACT_APP_API_URL, // Ensure this is set in your .env file
+    baseURL: "https://jsonplaceholder.typicode.com", // Ensure this is set in your .env file
     timeout: 10000, // Set a timeout for requests
     headers: {
         'Content-Type': 'application/json', // Set default content type
